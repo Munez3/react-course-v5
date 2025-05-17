@@ -1,0 +1,8 @@
+.user {
+  padding: 5px;
+  cursor: pointer;
+
+  &:nth-child(odd) {
+    background-color: #f4f4f4;
+  }
+}

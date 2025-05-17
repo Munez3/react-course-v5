@@ -1,0 +1,12 @@
+.addUser {
+  margin: 66px auto 0;
+  width: 400px;
+
+  &__input {
+    margin: 5px 0;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

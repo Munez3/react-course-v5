@@ -1,0 +1,55 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+
+  &-col-2 {
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 3rem;
+  }
+  &-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+.btn {
+  margin: 5px 0 5px auto;
+  background-color: green;
+  color: white;
+  display: block;
+  transition: 200ms;
+
+  &:hover {
+    background-color: darkgreen;
+  }
+
+  &:disabled {
+    background-color: gray;
+  }
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.input {
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: block;
+  box-sizing: border-box;
+}
