@@ -1,16 +1,11 @@
-import User from "./User";
 import { useCollapse } from "../hooks/useCollapse";
 import { useFilteredCollection } from "../hooks/useFilteredCollection";
+import useUserContext from "../UserContext";
+import User from "./User";
 
-interface IProps {
-  users: IUserWithID[];
-  deleteUser: (id: number) => void;
-}
+export default function UserList(): React.ReactElement {
+  const { users, deleteUser } = useUserContext();
 
-export default function UserList({
-  users,
-  deleteUser,
-}: IProps): React.ReactElement {
   const { activeIndex, setActive } = useCollapse();
 
   const { filteredCollection, search, setSearch } = useFilteredCollection(

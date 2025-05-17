@@ -1,12 +1,12 @@
 import {
-  RouterProvider,
   createBrowserRouter,
   Link,
   Outlet,
-} from "react-router-dom";
-import "./index.scss";
-import Home from "./Home";
+  RouterProvider,
+} from "react-router";
 import App from "./App";
+import Home from "./Home";
+import "./index.scss";
 
 export default function Router() {
   return <RouterProvider router={router} />;

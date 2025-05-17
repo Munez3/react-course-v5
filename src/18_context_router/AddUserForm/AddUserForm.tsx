@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
-import style from "./AddUserForm.module.scss";
+import { useNavigate } from "react-router";
 import useUserContext from "../UserContext";
-import { useNavigate } from "react-router-dom";
+import style from "./AddUserForm.module.scss";
 
 export default function AddUserForm(): React.ReactElement {
   const { addUser } = useUserContext();

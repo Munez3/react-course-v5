@@ -1,6 +1,7 @@
-import User from "./User";
+import type { IUserWithID } from "../App.interface";
 import { useCollapse } from "../hooks/useCollapse";
 import { useFilteredCollection } from "../hooks/useFilteredCollection";
+import User from "./User";
 
 interface IProps {
   users: IUserWithID[];

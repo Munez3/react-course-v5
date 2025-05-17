@@ -1,11 +1,11 @@
 import {
-  RouterProvider,
   createBrowserRouter,
   Link,
   Outlet,
-  useParams,
+  RouterProvider,
   useNavigate,
-} from "react-router-dom";
+  useParams,
+} from "react-router";
 import "./index.scss";
 
 export default function Router() {

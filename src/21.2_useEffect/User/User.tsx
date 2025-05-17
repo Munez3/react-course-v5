@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import UserDetails from "./UserDetails";
 import "./user.scss";
 interface IProps {

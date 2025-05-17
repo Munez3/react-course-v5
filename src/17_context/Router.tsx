@@ -1,12 +1,12 @@
 import {
-  RouterProvider,
   createBrowserRouter,
   Link,
   Outlet,
-} from "react-router-dom";
-import "./index.scss";
-import Home from "./Home";
+  RouterProvider,
+} from "react-router";
 import App from "./App";
+import Home from "./Home";
+import "./index.scss";
 import { UserContextProvider } from "./UserContext";
 
 export default function Router() {
@@ -15,19 +15,16 @@ export default function Router() {
 
 function Nav() {
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/users">Users</Link>
-          </li>
-        </ul>
-      </nav>
-      <Outlet />
-    </>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/users">Users</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
@@ -37,6 +34,7 @@ const router = createBrowserRouter([
     element: (
       <UserContextProvider>
         <Nav />
+        <Outlet />
       </UserContextProvider>
     ),
     children: [

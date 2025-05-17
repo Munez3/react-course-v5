@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import AddUserForm from "./AddUserForm/AddUserForm";
+import type { IUser } from "./App.interface";
 import UserList from "./User/UserList";
 import userReducer from "./userReducer";
 

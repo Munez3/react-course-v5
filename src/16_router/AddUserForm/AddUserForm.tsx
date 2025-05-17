@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import type { IUser } from "../App.interface";
 import style from "./AddUserForm.module.scss";
 interface IProps {
   addUser: (user: IUser) => void;
@@ -28,25 +29,40 @@ export default function AddUserForm({ addUser }: IProps): React.ReactElement {
   return (
     <div className={style.addUser}>
       <form onSubmit={handleSubmit} ref={formRef}>
-        <input
-          className={style.addUser__input}
-          onChange={handlechange}
-          name="firstName"
-          placeholder="Imię"
-        />
-        <input
-          className={style.addUser__input}
-          onChange={handlechange}
-          name="lastName"
-          placeholder="Nazwisko"
-        />
-        <input
-          onChange={handlechange}
-          type="number"
-          name="age"
-          placeholder="Wiek"
-          className={style.addUser__input}
-        />
+        <div>
+          <label>
+            Imię
+            <input
+              className={style.addUser__input}
+              onChange={handlechange}
+              name="firstName"
+              placeholder="Imię"
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Nazwisko
+            <input
+              className={style.addUser__input}
+              onChange={handlechange}
+              name="lastName"
+              placeholder="Nazwisko"
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Wiek
+            <input
+              onChange={handlechange}
+              type="number"
+              name="age"
+              placeholder="Wiek"
+              className={style.addUser__input}
+            />
+          </label>
+        </div>
         <button
           type="submit"
           className="btn"

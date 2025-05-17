@@ -1,8 +1,8 @@
-import User from "./User";
+import { Outlet, useNavigate, useParams } from "react-router";
 import { useCollapse } from "../hooks/useCollapse";
 import { useFilteredCollection } from "../hooks/useFilteredCollection";
 import useUserContext from "../UserContext";
-import { Outlet, useNavigate, useParams } from "react-router-dom";
+import User from "./User";
 
 export default function UserList(): React.ReactElement {
   const { id } = useParams<{ id: string }>();

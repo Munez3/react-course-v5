@@ -1,9 +1,10 @@
 import {
-  PropsWithChildren,
+  type PropsWithChildren,
   createContext,
   useContext,
   useReducer,
 } from "react";
+import type { IUser, IUserWithID } from "./App.interface";
 import userReducer from "./userReducer";
 
 const initialState = [
@@ -42,6 +43,7 @@ export function UserContextProvider({
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default function useUserContext() {
   return useContext(UserContext);
 }

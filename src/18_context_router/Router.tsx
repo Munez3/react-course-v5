@@ -1,14 +1,14 @@
 import {
-  RouterProvider,
   createBrowserRouter,
   Link,
   Outlet,
-} from "react-router-dom";
-import "./index.scss";
-import Home from "./Home";
-import { UserContextProvider } from "./UserContext";
+  RouterProvider,
+} from "react-router";
 import AddUserForm from "./AddUserForm/AddUserForm";
+import Home from "./Home";
+import "./index.scss";
 import UserList from "./User/UserList";
+import { UserContextProvider } from "./UserContext";
 
 export default function Router() {
   return <RouterProvider router={router} />;

@@ -1,11 +1,11 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./index.scss";
-import Home from "./Home/Home";
-import { UserContextProvider } from "./UserContext";
+import { RouterProvider, createBrowserRouter } from "react-router";
 import AddUserForm from "./AddUserForm/AddUserForm";
-import UserList from "./User/UserList";
 import App from "./App";
+import Home from "./Home/Home";
+import "./index.scss";
 import SingleUser from "./User/SingleUser";
+import UserList from "./User/UserList";
+import { UserContextProvider } from "./UserContext";
 
 /***
  * npx json-server --watch db.json --port 3001 --delay 150
