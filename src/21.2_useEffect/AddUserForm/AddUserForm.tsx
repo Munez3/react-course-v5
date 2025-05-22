@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router";
+import type { IUser } from "../App.interface";
 import useUserContext from "../UserContext";
 import style from "./AddUserForm.module.scss";
 
@@ -31,25 +32,40 @@ export default function AddUserForm(): React.ReactElement {
   return (
     <div className={style.addUser}>
       <form onSubmit={handleSubmit} ref={formRef}>
-        <input
-          className={style.addUser__input}
-          onChange={handlechange}
-          name="firstName"
-          placeholder="Imię"
-        />
-        <input
-          className={style.addUser__input}
-          onChange={handlechange}
-          name="lastName"
-          placeholder="Nazwisko"
-        />
-        <input
-          onChange={handlechange}
-          type="number"
-          name="age"
-          placeholder="Wiek"
-          className={style.addUser__input}
-        />
+        <div>
+          <label>
+            Imię
+            <input
+              className={style.addUser__input}
+              onChange={handlechange}
+              name="firstName"
+              placeholder="Imię"
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Nazwisko
+            <input
+              className={style.addUser__input}
+              onChange={handlechange}
+              name="lastName"
+              placeholder="Nazwisko"
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Wiek
+            <input
+              onChange={handlechange}
+              type="number"
+              name="age"
+              placeholder="Wiek"
+              className={style.addUser__input}
+            />
+          </label>
+        </div>
         <button
           type="submit"
           className="btn"

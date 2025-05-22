@@ -7,7 +7,7 @@ import UserList from "./User/UserList";
 import { UserContextProvider } from "./UserContext";
 
 /***
- * npx json-server --watch db.json --port 3001 --delay 150
+ * npx json-server --watch db.json --port 3000 --delay 150
  */
 
 export default function Router() {

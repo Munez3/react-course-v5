@@ -1,12 +1,8 @@
-import {
-  PropsWithChildren,
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-} from "react";
-import userReducer from "./userReducer";
+import type { PropsWithChildren } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import api from "./api";
+import type { IUser, IUserWithID } from "./App.interface";
+import userReducer from "./userReducer";
 
 const initialState: IUserWithID[] = [];
 
@@ -63,6 +59,7 @@ export function UserContextProvider({
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default function useUserContext() {
   return useContext(UserContext);
 }

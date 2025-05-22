@@ -1,10 +1,10 @@
-interface IUser {
+export interface IUser {
   firstName: string | undefined;
   lastName: string | undefined;
   age: number | undefined;
-  // skills: string[] | undefined;
+  skills?: string[] | undefined;
 }
 
-interface IUserWithID extends IUser {
+export interface IUserWithID extends IUser {
   id: number;
 }

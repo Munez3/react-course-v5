@@ -1,3 +1,5 @@
+import type { IUserWithID } from "./App.interface";
+
 type ACTION =
   | { type: "SET_USERS"; payload: IUserWithID[] }
   | { type: "ADD_USER"; payload: IUserWithID }

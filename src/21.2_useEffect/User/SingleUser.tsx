@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import api from "../api";
+import type { IUserWithID } from "../App.interface";
 
-interface IProps {}
-
-export default function SingleUser({}: IProps): React.ReactElement | null {
+export default function SingleUser(): React.ReactElement | null {
   const { id } = useParams<{ id: string }>();
   const [user, setUser] = useState<IUserWithID | undefined>(undefined);
 

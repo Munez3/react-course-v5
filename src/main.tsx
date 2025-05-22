@@ -64,16 +64,16 @@ const dirNames = [
   //29
   "19_json_server/Router",
   //30
-  "20.1_axios/Router",
+  "20.1_axios/axiosTest",
   //31
-  "20.2_axios_wrong_fetch/ROuter",
+  "20.2_axios_wrong_fetch/Router",
   //32
   "21.1_useEffect_wrong_fetch/Router",
   //33
   "21.2_useEffect/Router",
 ];
 
-const CURRENT_APP = 28; // Change this number to switch between different App components
+const CURRENT_APP = 33; // Change this number to switch between different App components
 
 // Dynamic import based on the current app number
 const App = (await import(/* @vite-ignore */ `./${dirNames[CURRENT_APP]}`))
@@ -82,8 +82,5 @@ const App = (await import(/* @vite-ignore */ `./${dirNames[CURRENT_APP]}`))
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-    {/* 24 = 16_router/App */}
-    {/* <Router /> */}
-    {/* <ParamTest /> */}
   </StrictMode>
 );

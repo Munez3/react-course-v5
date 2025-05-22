@@ -1,3 +1,5 @@
+import type { IUser, IUserWithID } from "./App.interface";
+
 let id = 4;
 
 type ACTION =

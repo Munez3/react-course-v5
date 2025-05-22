@@ -1,3 +1,4 @@
+import type { IUser } from "../App.interface";
 import UserDetails from "./UserDetails";
 import "./user.scss";
 interface IProps {

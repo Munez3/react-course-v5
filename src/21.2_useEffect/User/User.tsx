@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import type { IUserWithID } from "../App.interface";
 import UserDetails from "./UserDetails";
 import "./user.scss";
 interface IProps {

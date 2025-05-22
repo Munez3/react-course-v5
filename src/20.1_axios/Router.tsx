@@ -8,23 +8,7 @@ import AddUserForm from "./AddUserForm/AddUserForm";
 import Home from "./Home";
 import UserList from "./User/UserList";
 import { UserContextProvider } from "./UserContext";
-import api from "./api";
 import "./index.scss";
-
-/***
- * npx json-server --watch db.json --port 3001 --delay 150
- */
-
-async function getUsers() {
-  try {
-    const response = await api("/users");
-    console.log(response.data);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-getUsers();
 
 export default function Router() {
   return <RouterProvider router={router} />;
