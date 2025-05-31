@@ -82,5 +82,8 @@ const App = (await import(/* @vite-ignore */ `./${dirNames[CURRENT_APP]}`))
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
+    <div style={{ fontWeight: "bold" }}>
+      git clone https://github.com/Munez3/react-course-v5.git
+    </div>
   </StrictMode>
 );
